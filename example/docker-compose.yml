@@ -1,0 +1,13 @@
+bind:
+  image: 'aaronfoley/bind9:latest'
+  container_name: 'bind9'
+
+  ports:
+  - 553:53/tcp
+  - 553:53/udp
+
+  volumes:
+  - ./named.conf:/etc/bind/named.conf
+  - ./example.com.zone:/etc/bind/example.com.zone
+
+  restart: always

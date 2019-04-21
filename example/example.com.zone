@@ -1,0 +1,13 @@
+$TTL 1h
+
+@ IN SOA ns1.example.com contact.example.com. (
+            2016021501      ; Serial
+            1h              ; Refresh
+            15m             ; Retry
+            1d              ; Expire
+            1h );           ; Negative Cache TTL
+
+
+example.com.        1800    IN    NS        ns1.example.com.
+www                 1800    IN    A         192.168.1.200
+ns1                 1800    IN    A         127.0.0.1
